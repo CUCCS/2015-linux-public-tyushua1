@@ -28,10 +28,16 @@ asciinema auth
 
 - 自查清单
   - 你了解vim有哪几种工作模式？
-    - 一般模式(Normal Mode):按esc键由其他模式到一般模式
-    - 编辑模式(Insert Mode)：一般模式按下i/I/o/O等进入编辑模式
-    - 可视化模式(Visual Mode):Ctrl+V进入可视化模式
-    - 命令行模式(Ed Mode)：一般模式输入:进入命令行模式
+    - Normal Mode：打开编辑器时初始进入的模式，可执行很多指令，如x：删除光标处字符等
+    - Visual Mode：所选中区域高亮，然后作为其它指令执行的内容
+    - Select Mode：输入一个可打印字符会替换原来选中的内容，然后进入Insert模式
+    - Insert Mode：所输入的内容会编辑到文本中
+    - Command-line Mode：可执行一条命令
+    - Ex mode：类似command-line模式，但是执行一个命令后任然留在Ex模式
+    - 模式之间的转换
+    ![](images/1.png)  
+    ![](images/2.png)
+    ![](images/3.png)
   - Normal模式下，从当前行开始，一次向下移动光标10行的-操作方法？如何快速移动到文件开始行和结束行？如何快速跳转到文件中的第N行？
     - 光标下移10行：10j
     - 快速移动到文件开始行：gg
