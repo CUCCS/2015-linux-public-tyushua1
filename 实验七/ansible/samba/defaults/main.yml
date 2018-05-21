@@ -1,0 +1,5 @@
+SMB_USER: "demoUser"
+SMB_PASS: "password"
+SMB_GROUP: "demoGroup"
+SHR_GUEST: "/srv/samba/guest"
+SHR_DEMO: "/srv/samba/demo"
