@@ -1,4 +1,4 @@
-### Linux系统与网络管理 实验报告5
+### Linux系统与网络管理 实验报告6
 ### 实验名称
 - SHELL脚本编程练习进阶：FTP、NFS、DHCP、DNS、Samba服务器的自动安装与配置
 
@@ -79,7 +79,7 @@ Deny from all
    ```  
    ![](images/nfs1.png)
    - 实验报告中请记录你在NFS客户端上看到的：
-     - 共享目录中文件、子目录的属主、权限信息;你通过NFS客户端在NFS共享目录中新建的目录、创建的文件的属主、权限信息
+     - 共享目录中文件、子目录的属主、权限信息;你通过NFS客户端在NFS共享目录中新建的目录、创建的文件的属主、权限信息  
      ![](images/nfs2.png)
      -  上述共享目录中文件、子目录的属主、权限信息和在NFS服务器端上查看到的信息一样吗？无论是否一致，请给出你查到的资料是如何讲解NFS目录中的属主和属主组信息应该如何正确解读   
      一致
@@ -159,16 +159,20 @@ Deny from all
  - [config: /etc/samba/smb.conf](conf/smb.conf)  
  - 修改/etc/samba/smb.conf文件
    - [global]找到全局设置标签[global]，在下面进行配置  
+   
    ```
-  workgroup = WORKGROUPhosts
-  allow = 192.168.1.11 ;windows主机ip
-  ```  
-  - 配置最简单访问目录几个基本属性：  
+   workgroup = WORKGROUPhosts
+   allow = 192.168.1.11 ;windows主机ip
+   ```
+  
+   - 配置最简单访问目录几个基本属性：  
+  
   ```
   [share]      windows客户端查看时看到的文件夹名
-path = /var/samba/share      共享目录位置，要系统中存在的目录，也可以配置完再创建
-read only = no
-public   = yes
+  path = /var/samba/share      共享目录位置，要系统中存在的目录，也可以配置完再创建
+  read only = no
+  public   = yes
   ```
+  
  - 参考链接  
  [https://blog.csdn.net/linglongwunv/article/details/5212919](https://blog.csdn.net/linglongwunv/article/details/5212919)
